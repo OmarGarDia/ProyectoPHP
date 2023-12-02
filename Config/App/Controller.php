@@ -1,17 +1,16 @@
 <?php
 
-class controller
+class Controller
 {
-
     public function __construct()
     {
-        $this->views = new views();
-        $this->cargaModel();
+        $this->views = new Views();
+        $this->cargarModel();
     }
     public function cargarModel()
     {
-        $model = get_class($this) . "model";
-        $ruta = "models/" . $model . ".php";
+        $model = get_class($this) . "Model";
+        $ruta = "Models/" . $model . ".php";
 
         if (file_exists($ruta)) {
             require_once $ruta;

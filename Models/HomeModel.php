@@ -1,9 +1,8 @@
 <?php
 
-class model_home
+class HomeModel
 {
     public function __construct()
     {
-        echo "conectado";
     }
 }
