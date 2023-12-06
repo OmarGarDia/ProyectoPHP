@@ -84,7 +84,7 @@
             </div>
             <div class="col-auto"><a class="fs--1 fw-semi-bold" href="olvidar-contrasena">¿Olvidaste tu contraseña?</a></div>
           </div><button class="btn btn-primary w-100 mb-3">Entrar</button>
-          <div class="text-center"><a class="fs--1 fw-bold" href="sign-up.html">Crear una cuenta</a></div>
+          <div class="text-center"><a class="fs--1 fw-bold" href="sign-up">Crear una cuenta</a></div>
         </div>
       </div>
     </div>

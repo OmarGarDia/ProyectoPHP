@@ -1,12 +1,11 @@
 <?php
 
 require_once("views/modulos/header.php");
-
+var_dump($_GET);
 if (isset($_GET["ruta"])) {
     $rutas = array(
-        "sign-in",
-        "index",
-        "olvidar-contrasena"
+        "olvidar-contrasena",
+        "sign-up"
     );
 
     if (in_array($_GET['ruta'], $rutas)) {
