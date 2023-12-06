@@ -1,38 +1,17 @@
 <?php
-require_once "Config/Config.php";
 
-$ruta = !empty($_GET['url']) ? $_GET['url'] : "Home/index";
+session_start();
 
-$array = explode("/", $ruta);
-$controller = $array[0];
-$metodo = "index";
-$parametro = "";
 
-if (!empty($array[1])) {
-    if (!empty($array[1] != "")) {
-        $metodo = $array[1];
-    }
-}
-
-if (!empty($array[2])) {
-    if (!empty($array[2] != "")) {
-        for ($i = 2; $i < count($array); $i++) {
-            $parametro .= $array[$i] . ",";
-        }
-        $parametro = trim($parametro, ",");
-    }
-}
-require_once "Config/App/autoload.php";
-$dirControllers = "Controllers/" . $controller . ".php";
-
-if (file_exists($dirControllers)) {
-    require_once $dirControllers;
-    $controller = new $controller();
-    if (method_exists($controller, $metodo)) {
-        $controller->$metodo($parametro);
-    } else {
-        echo "No existe el metodo";
-    }
+if (!isset($_SESSION["user"])) {
+    require_once("views/partials/login.view.php");
 } else {
-    echo "No existe el controlador";
+    // error_reporting(0);
+
+    include("controllers/ctrPlantilla.php");
+    include("controllers/FuncionesController.php");
+    include("controllers/PaginacionController.php");
+
+    $plantilla_controller = new ctrPlantillaController();
+    // $paginacion = new PaginacionController(4,$datos); // $datos es un array de datos con todos los datos de la tabla sin paginar
 }

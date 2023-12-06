@@ -1,29 +1,51 @@
-function frmLogin(e){
+function frmLogin(e) {
     e.preventDefault();
-    const email = document.getElementById("loginEmail");
-    const pass = document.getElementById("loginPassword");
-    if(email.value == ""){
-        pass.classList.remove("is-invalid");
-        email.classList.add("is-invalid");
-        email.focus();
-    }else if(pass.value == ""){
-        email.classList.remove("is-invalid");
-        pass.classList.add("is-invalid");
-        pass.focus();
-    }else{
+
+    const email = document.getElementById("loginEmail").value;
+    const pass = document.getElementById("loginPassword").value;
+
+    if (email === "") {
+        handleValidationError("Email no puede estar vacío", "loginEmail");
+    } else if (pass === "") {
+        handleValidationError("Contraseña no puede estar vacía", "loginPassword");
+    } else {
         const url = base_url + "Usuarios/validar";
-        const frm = document.getElementById("frmLogin");
+        const frm = new FormData(document.getElementById("frmLogin"));
         const http = new XMLHttpRequest();
+
         http.open("POST", url, true);
-        http.send(new FormData(frm));
-        http.onreadystatechange = function(){
-            if(this.readyState == 4 && this.status == 200){
-                const res = JSON.parse(this.responseText);
-                console.log(this.responseText);
-                if(res == "ok"){
-                    window.location = base_url + "Usuarios";
+        http.send(frm);
+
+        http.onreadystatechange = function () {
+            if (http.readyState === 4) {
+                if (http.status === 200) {
+                    console.log(http.responseText);
+                    try {
+                        const res = JSON.parse(http.responseText);
+
+                        if (res === "ok") {
+                            window.location = base_url + "Usuarios";
+                        } else {
+                           document.getElementById("alerta").classList.remove("d-none");
+                           document.getElementById("alerta").innerHTML = res;
+                        }
+                    } catch (error) {
+                        console.error("Error al analizar la respuesta JSON:", error);
+                    }
+                } else {
+                    console.error("Error en la solicitud:", http.status, http.statusText);
                 }
             }
-        }
+        };
     }
+}
+
+function handleValidationError(message, elementId) {
+    const pass = document.getElementById("loginPassword");
+
+    pass.classList.remove("is-invalid");
+    document.getElementById(elementId).classList.add("is-invalid");
+    pass.focus();
+
+    console.error("Validación de formulario:", message);
 }
