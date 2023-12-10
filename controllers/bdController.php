@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . "/models/modBD.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "ProyectoPHP/models/modBD.php");
 class bdController
 {
 

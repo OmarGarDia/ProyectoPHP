@@ -1,21 +1,33 @@
 <?php
+require_once "views/modulos/header.php";
 
-require_once("views/modulos/header.php");
-var_dump($_GET);
-if (isset($_GET["ruta"])) {
-    $rutas = array(
+// Validar la existencia de la variable y su formato
+if (isset($_GET["ruta"]) && preg_match('/^[a-zA-Z0-9-]+$/', $_GET["ruta"])) {
+    $allowedRoutes = [
         "olvidar-contrasena",
         "sign-up"
-    );
+    ];
 
-    if (in_array($_GET['ruta'], $rutas)) {
-        require_once("views/modulos/" . $_GET["ruta"] . ".php");
+    $requestedRoute = $_GET["ruta"];
+    // Validar que la ruta esté en la lista permitida
+    if (in_array($requestedRoute, $allowedRoutes)) {
+
+        $modulePath = "views/modulos/" . $requestedRoute . ".php";
+
+        // Validar que el archivo exista antes de incluirlo
+        if (file_exists($modulePath)) {
+            require_once $modulePath;
+        } else {
+            // Manejo de errores si el archivo no existe
+            require_once "views/modulos/404.php";
+        }
     } else {
-        require_once("views/modulos/404.php");
+        // Manejo de errores para rutas no permitidas
+        require_once "views/modulos/404.php";
     }
 } else {
-
-    require_once("views/modulos/login.php");
+    // Manejo de errores si la variable ruta no está presente o tiene un formato incorrecto
+    require_once "views/modulos/404.php";
 }
 
-require_once("views/modulos/footer.php");
+require_once "views/modulos/footer.php";

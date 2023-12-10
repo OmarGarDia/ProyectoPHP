@@ -1,6 +1,53 @@
 <?php
+
+
 class FuncionesController
 {
+
+
+    public static function ctrSanitizar($dato, $tipo_dato)
+    {
+        if ($tipo_dato == "cadena") {
+            $dato = filter_var($dato, FILTER_SANITIZE_STRING);
+            return $dato;
+        }
+
+        if ($tipo_dato == "email") {
+            $dato = filter_var($dato, FILTER_SANITIZE_EMAIL);
+            $dato = filter_var($dato, FILTER_VALIDATE_EMAIL);
+            return $dato;
+        }
+
+        if ($tipo_dato == "entero") {
+            $dato = filter_var($dato, FILTER_SANITIZE_NUMBER_INT);
+            return $dato;
+        }
+
+        if ($tipo_dato == "flotante") {
+            $dato = filter_var($dato, FILTER_SANITIZE_NUMBER_FLOAT);
+            return $dato;
+        }
+
+        if ($tipo_dato == "password") {
+            $dato = trim($dato);
+            return $dato;
+        }
+    }
+
+    public static function ctrCifrar($pass)
+    {
+        $pass = md5($pass);
+        return $pass;
+    }
+
+    public static function ctrCerrarSesion()
+    {
+        unset($_SESSION["usuario"]);
+        unset($_SESSION["tipo"]);
+        echo " <script> window.location='inicio';</script>";
+    }
+
+
     public static function  ctrLogError($error)
     {
         $backtrace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 2);

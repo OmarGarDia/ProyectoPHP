@@ -3,7 +3,7 @@
 session_start();
 
 if (!isset($_SESSION["user"])) {
-    require_once("views/partials/login.view.php");
+    require_once("views/modulos/login.php");
 } else {
     // error_reporting(0);
 

@@ -14,16 +14,16 @@
   <!-- ===============================================-->
   <!--    Favicons-->
   <!-- ===============================================-->
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
-  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
-  <link rel="manifest" href="assets/img/favicons/manifest.json">
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicons/favicon.ico">
+  <link rel="manifest" href="/assets/img/favicons/manifest.json">
   <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
   <meta name="theme-color" content="#ffffff">
-  <script src="vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="vendors/simplebar/simplebar.min.js"></script>
-  <script src="assets/js/config.js"></script>
+  <script src="/vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="/vendors/simplebar/simplebar.min.js"></script>
+  <script src="/assets/js/config.js"></script>
 
   <!-- ===============================================-->
   <!--    Stylesheets-->
@@ -31,12 +31,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com/">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&amp;display=swap" rel="stylesheet">
-  <link href="vendors/simplebar/simplebar.min.css" rel="stylesheet">
+  <link href="/vendors/simplebar/simplebar.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-  <link href="assets/css/theme-rtl.min.css" type="text/css" rel="stylesheet" id="style-rtl">
-  <link href="assets/css/theme.min.css" type="text/css" rel="stylesheet" id="style-default">
-  <link href="assets/css/user-rtl.min.css" type="text/css" rel="stylesheet" id="user-style-rtl">
-  <link href="assets/css/user.min.css" type="text/css" rel="stylesheet" id="user-style-default">
+  <link href="/assets/css/theme-rtl.min.css" type="text/css" rel="stylesheet" id="style-rtl">
+  <link href="/assets/css/theme.min.css" type="text/css" rel="stylesheet" id="style-default">
+  <link href="/assets/css/user-rtl.min.css" type="text/css" rel="stylesheet" id="user-style-rtl">
+  <link href="/assets/css/user.min.css" type="text/css" rel="stylesheet" id="user-style-default">
   <script>
     var phoenixIsRTL = window.config.config.phoenixIsRTL;
     if (phoenixIsRTL) {
@@ -62,11 +62,11 @@
     <div class="container">
       <div class="row flex-center min-vh-100 py-5">
         <div class="col-sm-10 col-md-8 col-lg-5 col-xxl-4"><a class="d-flex flex-center text-decoration-none mb-4" href="index-2.html">
-            <div class="d-flex align-items-center fw-bolder fs-5 d-inline-block"><img src="assets/img/icons/logo.png" alt="phoenix" width="58" /></div>
+            <div class="d-flex align-items-center fw-bolder fs-5 d-inline-block"><img src="/assets/img/icons/logo.png" alt="phoenix" width="58" /></div>
           </a>
           <div class="px-xxl-5">
             <div class="text-center mb-6">
-              <h4 class="text-1000">Forgot your password?</h4>
+              <h4 class="text-1000">¿Olvidaste tu contraseña?</h4>
               <p class="text-700 mb-5">Enter your email below and we will send <br class="d-sm-none" />you a reset link</p>
               <form class="d-flex align-items-center mb-5"><input class="form-control flex-1" id="email" type="email" placeholder="Email" /><button class="btn btn-primary ms-2">Send<span class="fas fa-chevron-right ms-2"></span></button></form><a class="fs--1 fw-bold" href="#!">Still having problems?</a>
             </div>
@@ -95,7 +95,7 @@
                   <p class="mb-0 fw-semi-bold fs--1">My payment method not working</p><span class="fa-solid fa-paper-plane text-primary fs--1 ms-3"></span>
                 </a></div>
               <div class="text-center mt-auto">
-                <div class="avatar avatar-3xl status-online"><img class="rounded-circle border border-3 border-white" src="assets/img/team/30.webp" alt="" /></div>
+                <div class="avatar avatar-3xl status-online"><img class="rounded-circle border border-3 border-white" src="ProyectoPHP/assets/img/team/30.webp" alt="" /></div>
                 <h5 class="mt-2 mb-3">Eric</h5>
                 <p class="text-center text-black mb-0">Ask us anything – we’ll get back to you here or by email within 24 hours.</p>
               </div>
@@ -168,8 +168,8 @@
       <div class="setting-panel-item">
         <h5 class="setting-panel-item-title">Horizontal Navbar Appearance</h5>
         <div class="row gx-2">
-          <div class="col-6"><input class="btn-check" id="navbarTopDefault" name="navbar-top-style" type="radio" value="default" data-theme-control="phoenixNavbarTopStyle" /><label class="btn d-inline-block btn-navbar-style fs--1" for="navbarTopDefault"> <span class="mb-2 rounded d-block"><img class="img-fluid img-prototype d-dark-none mb-0" src="../../../assets/img/generic/top-default.png" alt="" /><img class="img-fluid img-prototype d-light-none mb-0" src="../../../assets/img/generic/top-style-darker.png" alt="" /></span><span class="label-text">Default</span></label></div>
-          <div class="col-6"><input class="btn-check" id="navbarTopDarker" name="navbar-top-style" type="radio" value="darker" data-theme-control="phoenixNavbarTopStyle" /><label class="btn d-inline-block btn-navbar-style fs--1" for="navbarTopDarker"> <span class="mb-2 rounded d-block"><img class="img-fluid img-prototype d-dark-none mb-0" src="../../../assets/img/generic/navbar-top-style-light.png" alt="" /><img class="img-fluid img-prototype d-light-none mb-0" src="../../../assets/img/generic/top-style-lighter.png" alt="" /></span><span class="label-text d-dark-none">Darker</span><span class="label-text d-light-none">Lighter</span></label></div>
+          <div class="col-6"><input class="btn-check" id="navbarTopDefault" name="navbar-top-style" type="radio" value="default" data-theme-control="phoenixNavbarTopStyle" /><label class="btn d-inline-block btn-navbar-style fs--1" for="navbarTopDefault"> <span class="mb-2 rounded d-block"><img class="img-fluid img-prototype d-dark-none mb-0" src="./assets/img/generic/top-default.png" alt="" /><img class="img-fluid img-prototype d-light-none mb-0" src="../../../assets/img/generic/top-style-darker.png" alt="" /></span><span class="label-text">Default</span></label></div>
+          <div class="col-6"><input class="btn-check" id="navbarTopDarker" name="navbar-top-style" type="radio" value="darker" data-theme-control="phoenixNavbarTopStyle" /><label class="btn d-inline-block btn-navbar-style fs--1" for="navbarTopDarker"> <span class="mb-2 rounded d-block"><img class="img-fluid img-prototype d-dark-none mb-0" src="./assets/img/generic/navbar-top-style-light.png" alt="" /><img class="img-fluid img-prototype d-light-none mb-0" src="../../../assets/img/generic/top-style-lighter.png" alt="" /></span><span class="label-text d-dark-none">Darker</span><span class="label-text d-light-none">Lighter</span></label></div>
         </div>
       </div><a class="bun btn-primary d-grid mb-3 text-white dark__text-100 mt-5 btn btn-primary" href="https://themes.getbootstrap.com/product/phoenix-admin-dashboard-webapp-template/" target="_blank">Purchase template</a>
     </div>
@@ -186,17 +186,17 @@
   <!-- ===============================================-->
   <!--    JavaScripts-->
   <!-- ===============================================-->
-  <script src="vendors/popper/popper.min.js"></script>
-  <script src="vendors/bootstrap/bootstrap.min.js"></script>
-  <script src="vendors/anchorjs/anchor.min.js"></script>
-  <script src="vendors/is/is.min.js"></script>
-  <script src="vendors/fontawesome/all.min.js"></script>
-  <script src="vendors/lodash/lodash.min.js"></script>
+  <script src="./vendors/popper/popper.min.js"></script>
+  <script src="./vendors/bootstrap/bootstrap.min.js"></script>
+  <script src="./vendors/anchorjs/anchor.min.js"></script>
+  <script src="./vendors/is/is.min.js"></script>
+  <script src="./vendors/fontawesome/all.min.js"></script>
+  <script src="./vendors/lodash/lodash.min.js"></script>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
-  <script src="vendors/list.js/list.min.js"></script>
-  <script src="vendors/feather-icons/feather.min.js"></script>
-  <script src="vendors/dayjs/dayjs.min.js"></script>
-  <script src="assets/js/phoenix.js"></script>
+  <script src="./vendors/list.js/list.min.js"></script>
+  <script src="./vendors/feather-icons/feather.min.js"></script>
+  <script src="./vendors/dayjs/dayjs.min.js"></script>
+  <script src="./assets/js/phoenix.js"></script>
 </body>
 
 </html>
