@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . "/ProyectoPHP/models/modLogs_sessions.php");
+require_once("models/modLogs_sessions.php");
 class Logs_sessionsController
 {
 

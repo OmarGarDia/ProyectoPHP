@@ -1,6 +1,6 @@
 <?php
 
-require_once($_SERVER['DOCUMENT_ROOT'] . "/ProyectoPHP/models/Conexion.php");
+require_once("models/Conexion.php");
 
 class modUsuarios
 {

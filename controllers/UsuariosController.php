@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . "/ProyectoPHP/models/modUsuarios.php");
+require_once("models/modUsuarios.php");
 class UsuariosController
 {
 

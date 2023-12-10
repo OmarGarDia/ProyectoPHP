@@ -1,5 +1,4 @@
 <?php
-// Pagina desarollada por Julian
 
 require_once("controllers/UsuariosController.php");
 require_once("controllers/Logs_sessionsController.php");

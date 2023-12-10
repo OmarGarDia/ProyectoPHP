@@ -2,13 +2,13 @@
 require_once "views/modulos/header.php";
 
 // Validar la existencia de la variable y su formato
-if (isset($_GET["ruta"]) && preg_match('/^[a-zA-Z0-9-]+$/', $_GET["ruta"])) {
+if (isset($_GET["url"]) && preg_match('/^[a-zA-Z0-9-]+$/', $_GET["url"])) {
     $allowedRoutes = [
         "olvidar-contrasena",
         "sign-up"
     ];
 
-    $requestedRoute = $_GET["ruta"];
+    $requestedRoute = $_GET["url"];
     // Validar que la ruta esté en la lista permitida
     if (in_array($requestedRoute, $allowedRoutes)) {
 
