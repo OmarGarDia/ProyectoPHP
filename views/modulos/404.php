@@ -1,3 +1,3 @@
 <?php
 
-include("views/partials/404.view.php");
+include "views/partials/404.view.php";

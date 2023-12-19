@@ -1,33 +1,41 @@
 <?php
-require_once "views/modulos/header.php";
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+?>
 
-// Validar la existencia de la variable y su formato
-if (isset($_GET["url"]) && preg_match('/^[a-zA-Z0-9-]+$/', $_GET["url"])) {
-    $allowedRoutes = [
-        "olvidar-contrasena",
-        "sign-up"
-    ];
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
-    $requestedRoute = $_GET["url"];
-    // Validar que la ruta esté en la lista permitida
-    if (in_array($requestedRoute, $allowedRoutes)) {
+<body class="header-fixed sidebar-fixed sidebar-dark header-light" id="body">
+    <?php
+    include "./views/modulos/header.php";
 
-        $modulePath = "views/modulos/" . $requestedRoute . ".php";
+    require_once "./controllers/vistasControlador.php";
+    $IV = new vistasControlador();
+    $vistas = $IV->obtener_vistas_controlador();
 
-        // Validar que el archivo exista antes de incluirlo
-        if (file_exists($modulePath)) {
-            require_once $modulePath;
-        } else {
-            // Manejo de errores si el archivo no existe
-            require_once "views/modulos/404.php";
-        }
+    $vistasPermitidas = ["login", "404", "sign-up", "recuperar-contrasena"];
+
+    if (in_array($vistas, $vistasPermitidas)) {
+        require_once "./views/modulos/" . $vistas . ".php";
     } else {
-        // Manejo de errores para rutas no permitidas
-        require_once "views/modulos/404.php";
-    }
-} else {
-    // Manejo de errores si la variable ruta no está presente o tiene un formato incorrecto
-    require_once "views/modulos/404.php";
-}
+        // Solo incluir el nav-superior y nav-lateral para las vistas distintas de "login" y "sign-up"
+        if ($vistas != "login" && $vistas != "sign-up") {
+            include "./views/modulos/nav-superior.php";
+            include "./views/modulos/nav-lateral.php";
+        }
 
-require_once "views/modulos/footer.php";
+        // Asegúrate de que la vista exista antes de incluirla
+        $vistaPath = "./views/modulos/" . $vistas . ".php";
+        if (file_exists($vistaPath)) {
+            include $vistaPath;
+        } else {
+            echo "Error: La vista '$vistas' no existe.";
+        }
+
+        include "./views/modulos/footer.php";
+    }
+    ?>
+</body>
+
+</html>
