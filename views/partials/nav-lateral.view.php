@@ -5,15 +5,15 @@
           <div id="sidebar" class="sidebar sidebar-with-footer">
               <!-- Aplication Brand -->
               <div class="app-brand">
-                  <a href="/index.html" title="Sleek Dashboard">
+                  <a href="inicio" title="Sleek Dashboard">
                       <svg class="brand-icon" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="30" height="33" viewBox="0 0 30 33">
                           <g fill="none" fill-rule="evenodd">
-                              <path class="logo-fill-blue" fill="#7DBCFF" d="M0 4v25l8 4V0zM22 4v25l8 4V0z" />
-                              <path class="logo-fill-white" fill="#FFF" d="M11 4v25l8 4V0z" />
+                              <path class="logo-fill-red" fill="black" d="M0 4v25l8 4V0zM22 4v25l8 4V0z" />
+                              <path class="logo-fill-dark" fill="red" d="M11 4v25l8 4V0z" />
                           </g>
                       </svg>
 
-                      <span class="brand-name text-truncate">Sleek Dashboard</span>
+                      <span class="brand-name text-truncate">EverythingHere</span>
                   </a>
               </div>
 
@@ -21,6 +21,29 @@
               <div class="" data-simplebar style="height: 100%;">
                   <!-- sidebar menu -->
                   <ul class="nav sidebar-inner" id="sidebar-menu">
+                      <li class="has-sub active expand">
+                          <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#dashboard" aria-expanded="false" aria-controls="dashboard">
+                              <i class="mdi mdi-movie"></i>
+                              <span class="nav-text">Peliculas</span> <b class="caret"></b>
+                          </a>
+
+                          <ul class="collapse show" id="dashboard" data-parent="#sidebar-menu">
+                              <div class="sub-menu">
+                                  <li class="active">
+                                      <a class="sidenav-item-link" href="index.html">
+                                          <span class="nav-text">Listado de Peliculas</span>
+                                      </a>
+                                  </li>
+
+                                  <li class="">
+                                      <a class="sidenav-item-link" href="analytics.html">
+                                          <span class="nav-text">En Cartelera</span>
+                                          <span class="badge badge-success">new</span>
+                                      </a>
+                                  </li>
+                              </div>
+                          </ul>
+                      </li>
                       <li class="has-sub active expand">
                           <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#dashboard" aria-expanded="false" aria-controls="dashboard">
                               <i class="mdi mdi-view-dashboard-outline"></i>

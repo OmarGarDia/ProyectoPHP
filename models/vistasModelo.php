@@ -8,7 +8,7 @@ class vistasModelo
         $listaBlanca = ["sign-up", "inicio", "profile"];
         if (in_array($vistas, $listaBlanca)) {
             if (is_file("./views/modulos/" . $vistas . ".php")) {
-                $contenido = "./views/modulos/" . $vistas . ".php";
+                $contenido = $vistas;
             } else {
                 $contenido = "404";
             }

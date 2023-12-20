@@ -491,8 +491,32 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="right-sidebar-in right-sidebar-2-menu">
-                                <i class="mdi mdi-settings mdi-spin"></i>
+                            <li class="dropdown user-menu">
+                                <button href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                                    <span>Administración</span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li>
+                                        <a href="profile">
+                                            <i class="mdi mdi-account"></i> Usuarios y Roles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="mdi mdi-email"></i> Message
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="mdi mdi-diamond-stone"></i> Projects </a>
+                                    </li>
+                                    <li class="right-sidebar-in">
+                                        <a href="javascript:0"> <i class="mdi mdi-settings"></i> Setting </a>
+                                    </li>
+
+                                    <li class="dropdown-footer">
+                                        <a href="index.html"> <i class="mdi mdi-logout"></i> Log Out </a>
+                                    </li>
+                                </ul>
                             </li>
                             <!-- User Account -->
                             <li class="dropdown user-menu">

@@ -72,7 +72,7 @@
                   <button type="submit" class="btn btn-lg btn-primary btn-block mb-4">Registrarse</button>
 
                   <p>¿Ya tienes una cuenta?
-                    <a class="text-blue" href="sign-in.html">Entrar</a>
+                    <a class="text-blue" href="login">Entrar</a>
                   </p>
                 </div>
               </div>
