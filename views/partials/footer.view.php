@@ -37,5 +37,6 @@
   <script src='./assets/js/date-range.js'></script>
   <script src='./assets/plugins/toastr/toastr.min.js'></script>
   <script src="./assets/js/sleek.js"></script>
+  <script src="./assets/js/alertas.js"></script>
   <link href="./assets/options/optionswitch.css" rel="stylesheet">
   <script src="./assets/options/optionswitcher.js"></script>

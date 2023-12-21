@@ -42,7 +42,7 @@
           <div class="card-body p-5">
             <h4 class="text-dark mb-5">Registrate</h4>
 
-            <form action="/index.html">
+            <form action="" method="POST" class="" data-form="save">
               <div class="row">
                 <div class="form-group col-md-12 mb-4">
                   <input type="text" class="form-control input-lg" id="name" aria-describedby="nameHelp" placeholder="Name">

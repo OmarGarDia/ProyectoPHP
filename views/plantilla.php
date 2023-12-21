@@ -8,6 +8,7 @@ ini_set('display_errors', 1);
 
 <body class="header-fixed sidebar-fixed sidebar-dark header-light" id="body">
     <?php
+    $peticionAjax = false;
     include "./views/modulos/header.php";
 
     require_once "./controllers/vistasControlador.php";
@@ -32,9 +33,9 @@ ini_set('display_errors', 1);
         } else {
             echo "Error: La vista '$vistas' no existe.";
         }
-
-        include "./views/modulos/footer.php";
     }
+    include "./views/modulos/footer.php";
+
     ?>
 </body>
 
