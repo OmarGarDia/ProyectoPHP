@@ -42,22 +42,26 @@
           <div class="card-body p-5">
             <h4 class="text-dark mb-5">Registrate</h4>
 
-            <form action="" method="POST" class="" data-form="save">
+            <form action="./usuarioAjax" method="POST" class="FormularioAjax" data-form="save" autocomplete="off">
               <div class="row">
                 <div class="form-group col-md-12 mb-4">
-                  <input type="text" class="form-control input-lg" id="name" aria-describedby="nameHelp" placeholder="Name">
+                  <input type="text" class="form-control input-lg" id="name" name="name" aria-describedby="nameHelp" placeholder="Nombre">
                 </div>
-
                 <div class="form-group col-md-12 mb-4">
-                  <input type="email" class="form-control input-lg" id="email" aria-describedby="emailHelp" placeholder="Username">
+                  <input type="email" class="form-control input-lg" id="surname" name="surname" aria-describedby="emailHelp" placeholder="Apellidos">
+                </div>
+                <div class="form-group col-md-12 mb-4">
+                  <input type="text" class="form-control input-lg" id="dni" name="dni" aria-describedby="deniHelp" placeholder="Dni">
+                </div>
+                <div class="form-group col-md-12 ">
+                  <input type="password" class="form-control input-lg" id="password" name="password" placeholder="Contraseña">
                 </div>
 
                 <div class="form-group col-md-12 ">
-                  <input type="password" class="form-control input-lg" id="password" placeholder="Password">
+                  <input type="password" class="form-control input-lg" id="cpassword" name="cpassword" placeholder="Confirmar Contraseña">
                 </div>
-
                 <div class="form-group col-md-12 ">
-                  <input type="password" class="form-control input-lg" id="cpassword" placeholder="Confirm Password">
+                  <input type="password" class="form-control input-lg" id="email" name="email" placeholder="Correo electronico">
                 </div>
 
                 <div class="col-md-12">
@@ -70,15 +74,13 @@
                   </div>
 
                   <button type="submit" class="btn btn-lg btn-primary btn-block mb-4">Registrarse</button>
-
-                  <p>¿Ya tienes una cuenta?
-                    <a class="text-blue" href="login">Entrar</a>
-                  </p>
-                </div>
-              </div>
             </form>
+            <p>¿Ya tienes una cuenta?
+              <a class="text-blue" href="login">Entrar</a>
+            </p>
           </div>
         </div>
       </div>
     </div>
   </div>
+</body>

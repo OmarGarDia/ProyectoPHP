@@ -24,6 +24,7 @@ ini_set('display_errors', 1);
         if ($vistas != "login" && $vistas != "sign-up") {
             include "./views/modulos/nav-superior.php";
             include "./views/modulos/nav-lateral.php";
+            include "./views/modulos/footer.php";
         }
 
         // Asegúrate de que la vista exista antes de incluirla
@@ -34,7 +35,6 @@ ini_set('display_errors', 1);
             echo "Error: La vista '$vistas' no existe.";
         }
     }
-    include "./views/modulos/footer.php";
 
     ?>
 </body>
